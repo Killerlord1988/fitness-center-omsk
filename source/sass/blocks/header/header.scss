@@ -1,0 +1,9 @@
+.header {
+
+}
+
+.header h1 {
+  @include clear-content (0);
+  @include font(26px, 40px);
+  @include clear-list;
+}
