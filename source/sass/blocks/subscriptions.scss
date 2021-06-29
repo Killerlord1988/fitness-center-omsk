@@ -1,0 +1,147 @@
+.subscriptions {
+  background-color: $color-grey-backround;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.subscriptions__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.subscriptions__wrapper::after {
+  width: 470px;
+  height: 492px;
+  position: absolute;
+  content: url("../img/gym-machine.png");
+  right: -286px;
+  bottom: -269px;
+}
+
+.subscriptions__wrapper h2 {
+  @include clear-content (0);
+  font-family: $second-font;
+  @include font(49px, 49px);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.subscriptions__mounth {
+  position: relative;
+  display: flex;
+  margin-top: 53px;
+  border-bottom: 2px solid rgba($color: #787878, $alpha: 0.2);
+  padding-bottom: 20px;
+}
+
+.subscriptions__mounth input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.subscriptions__mounth label {
+  position: relative;
+  cursor: pointer;
+  @include font(20px, 150%);
+  font-weight: normal;
+  opacity: 0.5;
+  margin-right: 46px;
+  user-select: none;
+}
+
+.subscriptions__mounth label:last-child {
+  margin-right: 0;
+}
+
+.subscriptions__mounth input:checked+label {
+  opacity: 1;
+}
+
+.subscriptions__mounth input:checked+label::before {
+  position: absolute;
+  content: "";
+  bottom: -22px;
+  height: 2px;
+  width: 100%;
+  background-color: #d10a42;
+}
+
+.subscriptions__list {
+  @include clear-list;
+  margin-top: 39px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.subscriptions__list li {
+  background-color: $color-white;
+  padding: 68px 77px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.subscriptions__item-title h3 {
+  @include clear-content (0);
+  @include font(26px, 29px);
+  font-weight: bold;
+  text-align: center;
+}
+
+.subscriptions__item-title p {
+  @include clear-content (22px);
+  @include font(16px, 150%);
+  font-weight: normal;
+  text-align: center;
+  color: $color-blue-dark;
+}
+
+.subscriptions__item-price p {
+  position: relative;
+  @include clear-content (96px);
+  @include font(60px, 150%);
+  font-weight: bold;
+  text-align: center;
+  color: #103aae;
+  padding-right: 44px;
+}
+
+.subscriptions__item-price p::after {
+  position: absolute;
+  content: url("../img/rub.svg");
+  right: 0;
+}
+
+.subscriptions__list a {
+  cursor: pointer;
+  font-weight: bold;
+  @include font(12px, 14px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 27px 45px;
+  color: $color-text;
+  border: 2px solid $color-text;
+  margin-top: 59px;
+}
+
+.subscriptions__list li:hover {
+  padding: 61px 70px;
+  border: 7px solid transparent;
+  border-image: linear-gradient(#d10a42, #00359f);
+  -moz-border-image: -moz-linear-gradient(#d10a42, #00359f);
+  -webkit-border-image: -webkit-linear-gradient(#d10a42, #00359f);
+  border-image-slice: 1;
+}
+
+.subscriptions__list li:hover > a {
+  padding: 29px 47px;
+  background: $gradient-btn-2;
+  color: $color-white;
+  border: none;
+  opacity: 1;
+}

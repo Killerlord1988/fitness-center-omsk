@@ -19,10 +19,140 @@
 <body>
   <header class="header">
     <div class="container">
-      <h1>Добро пожаловать в Лигу А.</h1>
-    </div>
+      <div class="header__wrapper">
+        <div class="header__top">
+          <div class="header__logo">Supergym</div>
+          <a class="header__contacts" href="tel: 8-800-555-55-55">8-800-555-55-55</a>
+        </div>
+        <div class="header__hero hero">
+          <div class="hero__about-img">
+            <div class="hero__about">
+              <p class="hero__about-city">Омск</p>
+              <div class="hero__about-bottom">
+                <p class="hero__about-title">Фитнес<br>центр</p>
+                <p class="hero__about-description">Тренажёрный зал<br>Групповые занятия<br>Кардио-зона</p>
+              </div>
+              <a href="#">Купить&nbsp;абонемент</a>
+            </div>
+            <div class="hero__img">
+              <img src="img/hero@1x.jpg" srcset="img/hero@2x.jpg 2x" alt="sportsman" width="500" height="556">
+            </div>
+          </div>
+          <div class="hero__social">
+            <a class="hero__socail-link" href="https://www.facebook.com/" target="_blank">Fb</a>
+            <a class="hero__socail-link" href="https://vk.com/" target="_blank">Vk</a>
+            <a class="hero__socail-link" href="https://www.instagram.com/" target="_blank">Ig</a>
+          </div>
+        </div>
+      </div>
   </header>
-
+  <main>
+    <section class="about">
+      <div class="about__wrapper">
+        <div class="about__text">
+          <div class="about__text-title">
+            <h2>Тренажерный зал</h2>
+            <p>Просторный зал площадью 900 кв/м</p>
+          </div>
+          <div class="about__text-content">
+            <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+              Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+            <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
+              несколько оборудованных залов для различных видов групповых занятий.</p>
+          </div>
+        </div>
+        <div class="about__video-img">
+          <div class="about__img">
+            <img src="img/gym@1x.jpg" srcset="img/gym@2x.jpg 2x" alt="gym" width="660" height="401">
+          </div>
+          <div class="about__video">
+            <img src="img/video-gym@1x.jpg" srcset="img/video-gym@2x.jpg 2x" alt="video gym" width="364" height="228">
+            <div class="about__video-dark"></div>
+            <div class="about__video-btn-border">
+              <button class="about__video-btn" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscriptions">
+      <div class="container">
+        <div class="subscriptions__wrapper">
+          <h2>Абонементы</h2>
+          <div class="subscriptions__mounth">
+            <input type="radio" name="mount" id="mount1" checked>
+            <label for="mount1">1 месяц</label>
+            <input type="radio" name="mount" id="mount6">
+            <label for="mount6">6 месяцев</label>
+            <input type="radio" name="mount" id="mount12">
+            <label for="mount12">12 месяцев</label>
+          </div>
+          <ul class="subscriptions__list">
+            <li>
+              <div class="subscriptions__item-title">
+                <h3>С тренером</h3>
+                <p>12 занятий</p>
+              </div>
+              <div class="subscriptions__item-price">
+                <p>5000</p>
+              </div>
+              <a href="#">купить&nbsp;абонемент</a>
+            </li>
+            <li>
+              <div class="subscriptions__item-title">
+                <h3>Дневной</h3>
+                <p>с 8:00 до 17:00</p>
+              </div>
+              <div class="subscriptions__item-price">
+                <p>1700</p>
+              </div>
+              <a href="#">купить&nbsp;абонемент</a>
+            </li>
+            <li>
+              <div class="subscriptions__item-title">
+                <h3>Полный день</h3>
+                <p>с 8:00 до 22:00</p>
+              </div>
+              <div class="subscriptions__item-price">
+                <p>2700</p>
+              </div>
+              <a href="#">купить&nbsp;абонемент</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="promo">
+      <div class="container">
+        <div class="promo__wrapper">
+          <div class="promo__about">
+            <div class="promo__about-top">
+              <h2>SUPER<br>GAMES</h2>
+              <div class="promo__data-time">
+                <div class="promo__data">
+                  <p class="promo__data-name">Дата</p>
+                  <div class="promo__day">
+                    <p class="promo__day-number">7</p>
+                    <div class="promo__mounth-year">
+                      <p>Марта</p>
+                      <p>2019</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="promo__time">
+                  <p>Время</p>
+                  <p>12:00</p>
+                </div>
+              </div>
+            </div>
+            <p class="promo__description">Ежегодные соревнования по CrossFit</p>
+            <a href="#">заполнить&nbsp;заявку</a>
+          </div>
+          <div class="promo__img"></div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

@@ -1,0 +1,137 @@
+.promo {
+  padding-top: 120px;
+}
+
+.promo__wrapper {
+  display: flex;
+}
+
+.promo__about {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-red;
+  padding: 87px 78px;
+}
+
+.promo__about-top {
+  display: flex;
+}
+
+.promo__about-top h2 {
+  @include clear-content (0);
+  font-family: $second-font;
+  @include font(90px, 90px);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  color: $color-white;
+  margin-right: 50px;
+}
+
+.promo__data-time {
+  display: flex;
+  flex-direction: column
+}
+
+.promo__data-name {
+  @include clear-content (0);
+  @include font(18px, 150%);
+  font-weight: normal;
+  color: $color-white;
+}
+
+.promo__day {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+
+.promo__day::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: $color-white;
+  top: 4px;
+}
+
+.promo__day-number {
+  @include clear-content (0);
+  @include font(40px, 150%);
+  font-weight: bold;
+  line-height: 150%;
+  color: $color-white;
+  margin-right: 7px;
+}
+
+.promo__mounth-year p {
+  @include clear-content (0);
+  @include font(14px, 150%);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: $color-white;
+}
+
+.promo__time {
+  margin-top: 3px;
+}
+
+.promo__time p:first-child {
+  @include clear-content (0);
+  @include font(18px, 150%);
+  font-weight: normal;
+  color: $color-white;
+}
+
+.promo__time p:last-child {
+  position: relative;
+  @include clear-content (0);
+  @include font(40px, 150%);
+  font-weight: bold;
+  color: $color-white;
+}
+
+.promo__time p:last-child::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: $color-white;
+  top: 4px;
+}
+
+.promo__description {
+  @include clear-content (0);
+  @include font(18px, 150%);
+  font-weight: normal;
+  color: $color-white;
+}
+
+.promo__about a {
+  @include font(12px, 14px);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-white;
+  border: 4px solid $color-white;
+  text-align: center;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  margin-top: 55px;
+}
+
+.promo__img {
+  width: 100%;
+  height: auto;
+  background-image: url("../img/promo@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .promo__img {
+    background-image: url("../img/promo@2x.jpg");
+  }
+}

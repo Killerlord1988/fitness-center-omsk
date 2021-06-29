@@ -1,0 +1,87 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 98px;
+  padding-bottom: 51px;
+}
+
+.hero__about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 122px;
+  margin-right: 65px;
+}
+
+.hero__about-img {
+  display: flex;
+}
+
+.hero__about-city {
+  @include clear-content (0);
+  font-family: $second-font;
+  @include font(49px, 49px);
+  letter-spacing: 0.03em;
+  color: $color-white;
+}
+
+.hero__about-title {
+  @include clear-content (25px);
+  font-family: $second-font;
+  font-weight: bold;
+  @include font(109px, 109px);
+  letter-spacing: 0.03em;
+  text-align: right;
+  color: $color-white;
+}
+
+.hero__about-bottom {
+  position: relative;
+}
+
+.hero__about-description {
+  @include clear-content (0);
+  left: -80px;
+  top: 150px;
+  position: absolute;
+  @include font(14px, 150%);
+  text-align: right;
+  color: $color-white;
+}
+
+.hero a {
+  margin-top: 80px;
+  font-weight: bold;
+  @include font(12px, 14px);
+  padding: 24px 57px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-white;
+  border: 4px solid $color-white;
+}
+
+.hero__social {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+
+.hero__social a {
+  margin-top: 80px;
+  border: none;
+  padding: 0;
+  font-weight: regular;
+  @include font(12px, 14px);
+  margin-top: 24px;
+
+}

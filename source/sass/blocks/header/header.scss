@@ -1,9 +1,26 @@
 .header {
-
+  background: $gradien-background;
 }
 
-.header h1 {
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.header__logo {
+  font-family: $second-font;
   @include clear-content (0);
-  @include font(26px, 40px);
-  @include clear-list;
+  @include font(26px, 26px);
+  color: $color-white;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.header__contacts {
+  font-family: $second-font;
+  @include font(26px, 26px);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  color: $color-white;
 }
