@@ -102,7 +102,7 @@
 }
 
 .promo__description {
-  @include clear-content (0);
+  @include clear-content (15px);
   @include font(18px, 150%);
   font-weight: normal;
   color: $color-white;
