@@ -88,6 +88,10 @@
   border-radius: 50%;
 }
 
+.about__video-btn:hover {
+  background: $gradient-btn-2;
+}
+
 .about__video-btn::before {
   line-height: 0;
   position: absolute;
