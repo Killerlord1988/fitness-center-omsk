@@ -1,24 +1,25 @@
 .subscriptions {
+  position: relative;
   background-color: $color-grey-backround;
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
+.subscriptions::after {
+  position: absolute;
+  width: 287px;
+  height: 494px;
+  content: url("../img/gym-machine-desctop.png");
+  right: 0;
+  bottom: -150px;
+}
+
 .subscriptions__wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center
 }
 
-.subscriptions__wrapper::after {
-  width: 470px;
-  height: 492px;
-  position: absolute;
-  content: url("../img/gym-machine.png");
-  right: -286px;
-  bottom: -269px;
-}
 
 .subscriptions__wrapper h2 {
   @include clear-content (0);
@@ -123,7 +124,7 @@
   @include font(12px, 14px);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 27px 45px;
+  padding: 23px 43px;
   color: $color-text;
   border: 2px solid $color-text;
   margin-top: 59px;
@@ -138,10 +139,63 @@
   border-image-slice: 1;
 }
 
-.subscriptions__list li:hover > a {
-  padding: 29px 47px;
+.subscriptions__list li:hover>a {
+  padding: 25px 45px;
   background: $gradient-btn-2;
   color: $color-white;
   border: none;
   opacity: 1;
+}
+
+.subscriptions__bg-img {
+  position: relative;
+
+}
+
+@media (max-width: $tablet-width) {
+  .subscriptions {
+    padding-top: 100px;
+  }
+
+  .subscriptions::after {
+    position: absolute;
+    width: 347px;
+    height: 444px;
+    content: url("../img/gym-machine-tablet.png");
+    right: 0;
+    bottom: -110px;
+  }
+
+  .subscriptions__wrapper h2 {
+    @include font(42px, 42px);
+  }
+
+  .subscriptions__mounth {
+    margin-top: 45px;
+  }
+
+  .subscriptions__mounth label {
+    @include font(18px, 27px);
+    margin-right: 54px;
+  }
+
+  .subscriptions__list {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+  }
+
+  .subscriptions__list li {
+    margin-top: 40px;
+    padding: 58px 118px;
+    max-width: 442px;
+  }
+
+  .subscriptions__list li:hover {
+    padding: 51px 111px;
+  }
+
+  .subscriptions__list li:first-child {
+    margin-top: 0;
+  }
 }

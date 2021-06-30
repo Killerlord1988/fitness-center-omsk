@@ -40,6 +40,7 @@
 }
 
 .promo__day {
+  width: fit-content;
   position: relative;
   display: flex;
   align-items: center;
@@ -59,7 +60,6 @@
   @include clear-content (0);
   @include font(40px, 150%);
   font-weight: bold;
-  line-height: 150%;
   color: $color-white;
   margin-right: 7px;
 }
@@ -130,8 +130,73 @@
   background-position: center;
 }
 
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+@media (min-resolution: $retina-dpi),
+(min-resolution: $retina-dppx) {
   .promo__img {
     background-image: url("../img/promo@2x.jpg");
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  .promo {
+    padding-top: 100px;
+  }
+
+  .promo__about {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-red;
+    padding: 51px 45px;
+  }
+
+  .promo__about-top h2 {
+    @include font(52px, 52px);
+    margin-right: 29px;
+  }
+
+  .promo__data-name {
+    @include font(12px, 150%);
+  }
+
+  .promo__day-number {
+    @include font(24px, 36px);
+    margin-right: 3px;
+  }
+
+  .promo__day::before {
+    top: 2px;
+  }
+
+  .promo__mounth-year p {
+    @include font(10px, 10px);
+  }
+
+  .promo__time p:first-child {
+    @include font(12px, 18px);
+  }
+
+  .promo__time p:last-child {
+    @include font(24px, 36px);
+  }
+
+  .promo__time p:last-child::before {
+    top: 2px;
+  }
+
+  .promo__description {
+    @include font(12px, 18px);
+  }
+
+  .promo__about a {
+    @include font(10px, 12px);
+    border: 2px solid $color-white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 36px;
+  }
+
+  .promo__img {
+    background-position: left;
   }
 }
