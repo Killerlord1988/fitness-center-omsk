@@ -24,3 +24,17 @@
   letter-spacing: 0.03em;
   color: $color-white;
 }
+
+@media (max-width: $tablet-width) {
+  .header__top {
+    padding-top: 40px;
+  }
+
+  .header__logo {
+    @include font(24px, 24px);
+  }
+
+  .header__contacts {
+    @include font(24px, 24px);
+  }
+}
