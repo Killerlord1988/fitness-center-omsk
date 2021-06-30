@@ -102,6 +102,10 @@
   color: $color-blue-dark;
 }
 
+.subscriptions__item-price {
+  position: relative;
+}
+
 .subscriptions__item-price p {
   position: relative;
   @include clear-content (96px);
@@ -112,10 +116,23 @@
   padding-right: 44px;
 }
 
-.subscriptions__item-price p::after {
+.subscriptions__item-price p:first-child::after {
   position: absolute;
   content: url("../img/rub.svg");
   right: 0;
+}
+
+.subscriptions__item-price p:last-child {
+  position: absolute;
+  @include font(100px, 150%);
+  font-weight: bold;
+  color: $color-grey;
+  opacity: 0.48;
+  z-index: -10;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -55px;
+  padding-right: 0;
 }
 
 .subscriptions__list a {
