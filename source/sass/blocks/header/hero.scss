@@ -64,6 +64,7 @@
   @include font(12px, 14px);
   padding: 24px 57px;
   display: flex;
+  justify-content: center;
   align-items: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -134,5 +135,50 @@
 
   .hero__social {
     display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .hero {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+
+  .hero__wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .hero__about {
+    padding-top: 80px;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .hero__about-bottom {
+    margin-left: auto;
+  }
+
+  .hero__about-city {
+    @include font(28px, 28px);
+  }
+
+  .hero__about-title {
+    @include font(78px, 78px);
+  }
+
+  .hero__about-description {
+    @include font(14px, 21px);
+    top: 105px;
+    left: -75px;
+  }
+
+  .hero__img {
+    display: none;
+  }
+
+  .hero a {
+    width: 100%;
   }
 }

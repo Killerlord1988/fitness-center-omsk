@@ -38,3 +38,17 @@
     @include font(24px, 24px);
   }
 }
+
+@media (max-width: $mobile-width) {
+  .header__top {
+    padding-top: 20px;
+  }
+
+  .header__logo {
+    @include font(20px, 20px);
+  }
+
+  .header__contacts {
+    @include font(20px, 20px);
+  }
+}

@@ -191,12 +191,29 @@
   .promo__about a {
     @include font(10px, 12px);
     border: 2px solid $color-white;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin-top: 36px;
   }
 
   .promo__img {
     background-position: left;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    padding-top: 70px;
+  }
+
+  .promo__wrapper {
+    flex-direction: column;
+  }
+
+
+
+  .promo__img {
+    min-height: 292px;
+    background-position: center;
   }
 }

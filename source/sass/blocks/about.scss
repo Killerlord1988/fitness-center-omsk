@@ -60,7 +60,12 @@
   bottom: 0;
   overflow: hidden;
   width: 364px;
-  height: 228px;
+  height: auto;
+  line-height: 0;
+}
+
+.about__video img {
+  width: 100%;
 }
 
 .about__video-dark {
@@ -165,7 +170,6 @@
 
   .about__video {
     width: 266px;
-    height: 167px;
   }
 
   .about__video-btn-border {
@@ -178,5 +182,53 @@
   .about {
     padding-right: 0;
     padding-left: 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .about__text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .about__text-title h2 {
+    @include font(32px, 32px);
+    text-align: left;
+  }
+
+  .about__text-content {
+    margin-top: 50px;
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+
+  .about__text-title p {
+    margin-top: 20px;
+    text-align: left;
+    @include font(18px, 32px);
+  }
+
+  .about__text-content {
+    padding-left: 0;
+    padding-right: 32px;
+  }
+
+  .about__text-content p {
+    text-align: left;
+  }
+
+  .about__video-img {
+    margin-top: 40px;
+  }
+
+  .about__img {
+    padding-bottom: 0;
+  }
+
+  .about__video {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    position: relative;
   }
 }

@@ -118,8 +118,13 @@
 
 .subscriptions__item-price p:first-child::after {
   position: absolute;
-  content: url("../img/rub.svg");
+  content: "";
+  width: 30px;
+  height: 42px;
+  background-image: url("../img/rub.svg");
   right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .subscriptions__item-price p:last-child {
@@ -172,6 +177,7 @@
 @media (max-width: $tablet-width) {
   .subscriptions {
     padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .subscriptions::after {
@@ -214,5 +220,66 @@
 
   .subscriptions__list li:first-child {
     margin-top: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .subscriptions {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .subscriptions::after {
+    content: none;
+  }
+
+  .subscriptions__wrapper h2 {
+    @include font(32px, 32px);
+  }
+
+  .subscriptions__mounth {
+    margin-top: 35px;
+  }
+
+  .subscriptions__mounth label {
+    @include font(16px, 150%);
+    margin-right: 45px;
+  }
+
+  .subscriptions__list {
+    margin-top: 35px;
+  }
+
+  .subscriptions__list li {
+    margin-top: 40px;
+    padding: 58px 42px;
+    max-width: none;
+  }
+
+  .subscriptions__list li:hover {
+    padding: 51px 35px;
+  }
+
+  .subscriptions__item-title h3 {
+    @include font(22px, 24px);
+  }
+
+  .subscriptions__item-title p {
+    @include font(16px, 24px);
+    margin-top: 20px;
+  }
+
+  .subscriptions__item-price p {
+    @include font(42px, 72px);
+    margin-top: 80px;
+  }
+
+  .subscriptions__item-price p:first-child::after {
+    transform: translateY(-50%) scale(0.8);
+  }
+
+  .subscriptions__item-price p:last-child {
+    @include font(80px, 120%);
+    top: -35px;
   }
 }
