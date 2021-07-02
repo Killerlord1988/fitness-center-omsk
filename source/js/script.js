@@ -24,3 +24,16 @@ var swiper = new Swiper(".mySwiper", {
     },
   }
 });
+
+
+var swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 30,
+  loop: true,
+  // loopFillGroupWithBlank: true,
+  navigation: {
+    nextEl: ".reviews__slider-control--next",
+    prevEl: ".reviews__slider-control--prev",
+  },
+});
+
+console.log(swiper2);
