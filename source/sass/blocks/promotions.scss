@@ -1,0 +1,232 @@
+.promotions {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.promotions__wrapper h2 {
+  @include clear-content (0);
+  font-family: $second-font;
+  @include font(49px, 49px);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.promotions__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 62px;
+}
+
+.promotions__poster {
+  width: 48%;
+  display: flex;
+}
+
+.promotions__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 45px;
+  background-color: $color-red;
+  max-width: 280px;
+  min-height: 462px;
+}
+
+.promotions__about-year p:first-child {
+  @include clear-content (0);
+  @include font(28px, 28px);
+  font-weight: bold;
+  color: $color-white;
+}
+
+.promotions__about-year p:last-child {
+  @include clear-content (10px);
+  @include font(70px, 70px);
+  font-weight: bold;
+  color: $color-white;
+}
+
+.promotions__about-top>p {
+  @include clear-content (35px);
+  @include font(18px, 140%);
+  font-weight: normal;
+  color: $color-white;
+}
+
+.promotions__about a {
+  width: fit-content;
+  margin-top: auto;
+  @include clear-content (35px);
+  @include font(14px, 14px);
+  font-weight: bold;
+  color: $color-white;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-white;
+  border-bottom: 1px solid $color-white;
+}
+
+.promotions__about-img {
+  background-image: url("../img/promotions@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+@media (min-resolution: $retina-dpi),
+(min-resolution: $retina-dppx) {
+  .promotions__about-img {
+    background-image: url("../img/promotions@2x.jpg");
+  }
+}
+
+.promotions__items {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.promotions__item {
+  display: flex;
+  flex-direction: column;
+  min-height: 211px;
+  padding: 35px;
+  border: 7px solid transparent;
+  border-image: linear-gradient(#d10a42, #00359f);
+  -moz-border-image: -moz-linear-gradient(#d10a42, #00359f);
+  -webkit-border-image: -webkit-linear-gradient(#d10a42, #00359f);
+  border-image-slice: 1;
+}
+
+.promotions__item:last-child {
+  margin-top: auto;
+}
+
+.promotions__item-top p:first-child {
+  @include clear-content(0);
+  @include font(26px, 26px);
+  font-weight: bold;
+}
+
+.promotions__item-top p:last-child {
+  @include clear-content(20px);
+  @include font(16px, 16px);
+  font-weight: normal;
+}
+
+.promotions__item a {
+  width: fit-content;
+  margin-top: auto;
+  @include font(12px, 12px);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-text;
+  border-bottom: 1px solid $color-text;
+}
+
+@media (max-width: $tablet-width) {
+  .promotions {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .promotions__wrapper h2 {
+    @include font(42px, 42px);
+  }
+
+  .promotions__content {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .promotions__poster {
+    width: 100%;
+  }
+
+  .promotions__about-img {
+    background-position: top;
+  }
+
+  .promotions__items {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+
+  .promotions__item {
+    width: 48%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promotions {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .promotions__wrapper h2 {
+    @include font(32px, 32px);
+  }
+
+  .promotions__poster {
+    flex-direction: column;
+  }
+
+  .promotions__about {
+    max-width: none;
+    min-height: 299px;
+  }
+
+  .promotions__about-year p:first-child{
+    text-align: center;
+  }
+
+  .promotions__about-year p:last-child{
+    text-align: center;
+  }
+
+  .promotions__about-top > p {
+    @include clear-content (30px);
+    text-align: center;
+  }
+
+  .promotions__about a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promotions__about-img {
+    min-height: 299px;
+  }
+
+  .promotions__items {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .promotions__item {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .promotions__item:last-child {
+    margin-top: 30px;
+  }
+
+  .promotions__item-top p:first-child {
+    text-align: center;
+  }
+
+  .promotions__item-top p:last-child {
+    text-align: center;
+  }
+
+  .promotions__item a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
