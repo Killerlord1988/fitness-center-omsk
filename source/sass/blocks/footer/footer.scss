@@ -1,0 +1,143 @@
+.footer {
+  background-color: $color-footer;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.footer__logo {
+  font-family: $second-font;
+  @include font(26px, 26px);
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  color: $color-white;
+}
+
+.footer__nav {
+  display: flex;
+}
+
+.footer__nav-list {
+  @include clear-list;
+  display: flex;
+  margin-right: 40px;
+}
+
+.footer__nav-list:last-child {
+  margin-right: 0;
+}
+
+.footer__nav-list li {
+  margin-right: 40px;
+}
+
+.footer__nav-list:first-child li:first-child {
+  display: none;
+}
+
+.footer__nav-list li:last-child {
+  margin-right: 0;
+}
+
+.footer__nav-list a {
+  @include font(14px, 16px);
+  font-weight: normal;
+  color: $color-white;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+}
+
+.footer__social a {
+  margin-right: 25px;
+}
+
+.footer__social a:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .footer__wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .footer__logo {
+    @include font(24px, 24px);
+  }
+
+  .footer__nav-list {
+    margin-right: 30px;
+  }
+
+  .footer__nav-list li {
+    margin-right: 30px;
+  }
+
+  .footer__social a {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  .footer__logo--mobile {
+    display: block;
+    @include font(20px, 20px);
+  }
+
+  .footer__nav-list:first-child li:first-child {
+    display: block;
+  }
+
+  .footer__nav-list {
+    margin-right: 71px;
+  }
+
+  .footer__nav-list li {
+    margin-top: 30px;
+    margin-right: 0;
+  }
+
+  .footer__nav-list {
+    flex-direction: column;
+  }
+
+  .footer__social {
+    margin-top: 40px;
+  }
+
+  .footer__social a {
+    margin-right: 35px;
+  }
+
+  .footer__social a:nth-child(1) svg {
+    width: 32px;
+    height: 17px;
+  }
+
+  .footer__social a:nth-child(2) svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .footer__social a:nth-child(3) svg {
+    width: 14px;
+    height: 27px;
+  }
+}
