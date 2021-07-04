@@ -1,0 +1,123 @@
+.contacts {
+  width: 50%;
+  border-top: 1px solid #74819C;
+  ;
+}
+
+.contacts__wrapper {
+  padding-top: 70px;
+  padding-left: 120px;
+  padding-right: 159px;
+  padding-bottom: 70px;
+}
+
+.contacts__wrapper h2 {
+  @include clear-content (0);
+  font-family: $second-font;
+  @include font(49px, 49px);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.contacts__content {
+  margin-top: 47px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__content-right {
+  position: relative;
+  border-left: 1px solid #74819C;
+  padding-left: 60px;
+}
+
+.contacts__item {
+  margin-top: 20px;
+}
+
+.contacts__item:first-child {
+  margin-top: 0;
+}
+
+.contacts__item p:first-child {
+  @include clear-content (0);
+  @include font(16px, 150%);
+  font-weight: bold;
+}
+
+.contacts__item p {
+  @include clear-content (10px);
+  @include font(14px, 21px);
+  font-weight: normal;
+}
+
+.contacts__item a {
+  color: $color-text;
+}
+
+@media (max-width: $tablet-width) {
+  .contacts {
+    width: 100%;
+  }
+
+  .contacts__wrapper {
+    padding-left: 133px;
+    padding-right: 179px;
+  }
+
+  .contacts__content {
+    margin-top: 37px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .contacts__content-left {
+    padding-right: 48px;
+  }
+
+  .contacts__content-right {
+    padding-left: 48px;
+  }
+
+  .contacts__item p:first-child {
+    @include clear-content (0);
+    @include font(20px, 30px);
+    font-weight: bold;
+  }
+
+  .contacts__item p {
+    @include clear-content (15px);
+    @include font(18px, 18px);
+    font-weight: normal;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .contacts__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contacts__wrapper h2 {
+    @include font(32px, 32px);
+  }
+
+  .contacts__content {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .contacts__content-left {
+    padding-right: 0;
+  }
+
+  .contacts__content-right {
+    margin-top: 35px;
+    border: none;
+    padding-left: 0;
+  }
+
+  .contacts__item {
+    margin-top: 35px;
+  }
+}

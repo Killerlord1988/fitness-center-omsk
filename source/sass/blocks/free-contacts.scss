@@ -1,0 +1,9 @@
+.free-contacts {
+  display: flex;
+}
+
+@media (max-width: $tablet-width) {
+  .free-contacts {
+    flex-direction: column;
+  }
+}

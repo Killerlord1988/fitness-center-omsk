@@ -1,0 +1,106 @@
+.free-lesson {
+  width: 50%;
+  background-color: $color-text;
+}
+
+.free-lesson__wrapper {
+  padding-top: 70px;
+  padding-left: 103px;
+  padding-bottom: 70px;
+  padding-right: 170px;
+}
+
+.free-lesson__wrapper h2 {
+  @include clear-content (0);
+  font-family: $second-font;
+  @include font(49px, 49px);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+  color: $color-white
+}
+
+.free-lesson__form {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.free-lesson__form input {
+  width: 45%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #74819C;
+}
+
+.free-lesson__form input::placeholder {
+  @include font(14px, 16px);
+  font-weight: normal;
+  color: $color-white;
+}
+
+.free-lesson__form input:focus {
+  border-bottom: 1px solid $color-white;
+}
+
+.free-lesson__form button {
+  cursor: pointer;
+  margin-top: 30px;
+  @include font(14px, 16px);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  background-color: transparent;
+  border: 3px solid $color-white;
+  color: $color-white;
+}
+
+@media (max-width: $tablet-width) {
+  .free-lesson {
+    width: 100%;
+  }
+
+  .free-lesson__wrapper {
+    padding-left: 133px;
+    padding-right: 163px;
+  }
+
+  .free-lesson__wrapper h2 {
+    @include font(42px, 42px);
+  }
+
+  .free-lesson__form {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .free-lesson__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .free-lesson__wrapper h2 {
+    @include font(32px, 32px);
+  }
+
+  .free-lesson__form {
+    flex-direction: column;
+  }
+
+  .free-lesson__form input {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .free-lesson__form input:first-child {
+    margin-top: 0;
+  }
+}
