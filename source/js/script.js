@@ -1,5 +1,6 @@
 'use strict';
 
+//swiper slider initialslide
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -36,4 +37,6 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
-console.log(swiper2);
+//masked input
+
+$("#telephone").mask("+7 (999) 999-99-99");
