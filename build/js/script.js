@@ -1,5 +1,6 @@
 'use strict';
 
+//swiper slider initialslide
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -36,13 +37,6 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
-console.log(swiper2);
-
-
 //masked input
 
-// var phoneInput = document.querySelector(".free-lesson__form input[type=tel]")
-
-// console.log(phoneInput);
-
-$('.free-lesson__form input[type=tel]').mask('+7 (999) 999-99-99');
+$("#telephone").mask("+7 (999) 999-99-99");
