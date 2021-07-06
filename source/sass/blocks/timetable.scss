@@ -96,6 +96,10 @@
   color: $color-white;
 }
 
+.timetable__table-time--active {
+  background-color: red;
+}
+
 @media (max-width: $tablet-width) {
   .timetable {
     padding-top: 80px;
