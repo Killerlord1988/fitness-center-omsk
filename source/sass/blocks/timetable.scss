@@ -96,6 +96,12 @@
   color: $color-white;
 }
 
+.timetable__table-time-list .timetable__table-time--active {
+  background-color: $color-red;
+  border: 2px solid $color-red;
+  color: $color-white;
+}
+
 @media (max-width: $tablet-width) {
   .timetable {
     padding-top: 80px;
@@ -137,11 +143,9 @@
     padding: 48px 13px;
   }
 
-  .timetable__table-day-classes-list li {
-    padding: 48px 10px;
+  .timetable__table-day {
     max-width: 146px;
   }
-
 }
 
 @media (max-width: $mobile-width) {
@@ -152,5 +156,45 @@
 
   .timetable__wrapper h2 {
     @include font(32px, 32px);
+  }
+
+  .timetable__table-time-list li {
+    padding: 35px 12px;
+    @include font(16px, 16px);
+  }
+
+  .timetable__table-day-classes {
+    flex-direction: column;
+  }
+
+  .timetable__table-day-classes-list li {
+    @include font(16px, 16px);
+    max-width: none;
+    width: calc(100% - 50px);
+  }
+
+  .timetable__table-day {
+    position: relative;
+  }
+
+  .timetable__table-day::after {
+    display: flex;
+    position: absolute;
+    content: url("../img/arrow-down.svg");
+    right: -52px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 56px;
+    border: 2px solid $color-blue-2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timetable__table-day-classes-list li:not(:first-child) {
+    @include font(16px, 16px);
+    max-width: none;
+    width: 100%;
+    padding: 35px 12px;
   }
 }

@@ -1,6 +1,7 @@
 'use strict';
 
 //swiper slider initialslide
+
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -43,53 +44,33 @@ $('#telephone').mask('+7 (999) 999-99-99');
 
 //timetable
 
-var classes = document.querySelectorAll('.timetable__table-day-classes-list li:not(:first-child)');
-var days = document.querySelectorAll('.timetable__table-day-classes-list li:first-child');
-var times = document.querySelectorAll('.timetable__table-time-list li:not(:first-child)');
-var colomns = document.querySelectorAll('.timetable__table-day-classes-list');
+var activeRowClassName = 'timetable__table-active';
+var activeDayClassName = 'timetable__table-day--active';
+var activeTimeClassName = 'timetable__table-time--active';
 
+var table = document.querySelector('.timetable__table');
+var timesList = document.querySelector('.timetable__table-time-list');
 
-// times.forEach(function (el) {
-//   el.classList.add('dada')
-// });
-
-colomns.forEach(function (el) {
-  el.addEventListener('click', function (evt) {
-    var index = [...this.children].findIndex(el => el == evt.target)
-    console.log(index)
+var removeActiveClasses = (arrayOfClassNames) => {
+  arrayOfClassNames.forEach(classname => {
+    document.querySelectorAll('.' + classname).forEach(el => el.classList.remove(classname))
   })
-});
+};
 
-Object.keys(colomns).forEach(function (el) {
-  colomns[el].addEventListener('click', function (e) {
-    clearActive(days, 'timetable__table-day--active');
+var handleTableClick = (evt) => {
+  var target = evt.target
+  var parent = target.parentNode
+  var currentIdx = [...parent.children].findIndex(el => el === target)
 
-    if (e.target.nodeName === "LI") {
-      days[el].classList.add('timetable__table-day--active');
-    }
-  });
-});
+  if (!currentIdx || target.nodeName !== 'LI' || target.closest('.timetable__table-time-list')) return
 
-// Object.keys(classes).forEach(function (el) {
-//   classes[el].addEventListener('click', function (e) {
-//     // clearActive(days, 'timetable__table-day--active');
-//     var size = 4;
+  removeActiveClasses([activeDayClassName, activeRowClassName, activeTimeClassName])
 
-//     console.log(el);
-//   });
-// });
+  target.classList.add(activeRowClassName)
+  parent.querySelector('li').classList.add(activeDayClassName)
 
-classes.forEach(function (el) {
-  el.addEventListener('click', function (e) {
-    clearActive(classes, 'timetable__table-active');
-    e.target.classList.add('timetable__table-active');
-  });
-});
+  var currentTime = timesList.children[currentIdx]
+  currentTime.classList.add(activeTimeClassName)
+};
 
-function clearActive(obj, cls) {
-  obj.forEach(function (el) {
-    el.classList.remove(cls);
-  });
-}
-
-// console.log(colomns);
+table.addEventListener('click', handleTableClick);
