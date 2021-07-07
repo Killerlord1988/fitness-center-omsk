@@ -196,7 +196,7 @@
     position: relative;
   }
 
-  .timetable__table-day::after {
+  .timetable__table-day-classes-list--active:first-child .timetable__table-day::after {
     display: flex;
     position: absolute;
     content: url("../img/arrow-down.svg");
@@ -208,6 +208,10 @@
     border: 2px solid $color-blue-2;
     justify-content: center;
     align-items: center;
+  }
+
+  .timetable__table-day-classes-list--active:first-child .timetable__table-day--active-list::after {
+    content: url("../img/arrow-up.svg");
   }
 
   .timetable__table-day-classes-list li:not(:first-child) {
@@ -230,7 +234,16 @@
     display: block;
   }
 
-  .timetable__table-day--active-list ~ li {
+  .timetable__table-day--active-list {
+    margin-top: -2px;
+  }
+
+  .timetable__table-day-classes-list--active:first-child li {
+    margin-top: 8px;
+  }
+
+  .timetable__table-day--active-list~li {
     display: none;
+
   }
 }
