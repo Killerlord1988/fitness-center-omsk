@@ -74,3 +74,13 @@ var handleTableClick = (evt) => {
 };
 
 table.addEventListener('click', handleTableClick);
+
+//timetable mobile
+
+var activeOverlayClassName = 'timetable__table-time-overley--active';
+var activeClassesListClassName = 'timetable__table-day-classes-list--active';
+var activeDayListClassName = 'timetable__table-day--active-list';
+
+// var handleTableClick = (evt) => {
+//   var target = evt.target
+// }

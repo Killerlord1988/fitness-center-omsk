@@ -1,6 +1,7 @@
 'use strict';
 
 //swiper slider initialslide
+
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -43,23 +44,23 @@ $('#telephone').mask('+7 (999) 999-99-99');
 
 //timetable
 
-const activeRowClassName = 'timetable__table-active'
-const activeDayClassName = 'timetable__table-day--active'
-const activeTimeClassName = 'timetable__table-time--active'
+var activeRowClassName = 'timetable__table-active';
+var activeDayClassName = 'timetable__table-day--active';
+var activeTimeClassName = 'timetable__table-time--active';
 
-const table = document.querySelector('.timetable__table')
-const timesList = document.querySelector('.timetable__table-time-list')
+var table = document.querySelector('.timetable__table');
+var timesList = document.querySelector('.timetable__table-time-list');
 
-const removeActiveClasses = (arrayOfClassNames) => {
+var removeActiveClasses = (arrayOfClassNames) => {
   arrayOfClassNames.forEach(classname => {
     document.querySelectorAll('.' + classname).forEach(el => el.classList.remove(classname))
   })
-}
+};
 
-const handleTableClick = (evt) => {
-  const target = evt.target
-  const parent = target.parentNode
-  const currentIdx = [...parent.children].findIndex(el => el === target)
+var handleTableClick = (evt) => {
+  var target = evt.target
+  var parent = target.parentNode
+  var currentIdx = [...parent.children].findIndex(el => el === target)
 
   if (!currentIdx || target.nodeName !== 'LI' || target.closest('.timetable__table-time-list')) return
 
@@ -68,8 +69,16 @@ const handleTableClick = (evt) => {
   target.classList.add(activeRowClassName)
   parent.querySelector('li').classList.add(activeDayClassName)
 
-  const currentTime = timesList.children[currentIdx]
+  var currentTime = timesList.children[currentIdx]
   currentTime.classList.add(activeTimeClassName)
-}
+};
 
-table.addEventListener('click', handleTableClick)
+table.addEventListener('click', handleTableClick);
+
+//timetable mobile
+
+var activeOverlayClassName = 'timetable__table-time-overley--active';
+var activeClassesListClassName = 'timetable__table-day-classes-list--active';
+var activeDayListClassName = 'timetable__table-day--active-list';
+
+console.log(table);

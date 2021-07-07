@@ -88,6 +88,7 @@
 .timetable__table-day-classes .timetable__table-day-classes-list .timetable__table-active {
   color: $color-red;
   border: 2px solid $color-red;
+  background-color: transparent;
 }
 
 .timetable__table-day-classes-list .timetable__table-day--active {
@@ -100,6 +101,10 @@
   background-color: $color-red;
   border: 2px solid $color-red;
   color: $color-white;
+}
+
+.timetable__table-time-overley {
+  display: none;
 }
 
 @media (max-width: $tablet-width) {
@@ -158,6 +163,10 @@
     @include font(32px, 32px);
   }
 
+  .timetable__table-time {
+    position: relative;
+  }
+
   .timetable__table-time-list li {
     padding: 35px 12px;
     @include font(16px, 16px);
@@ -165,10 +174,20 @@
 
   .timetable__table-day-classes {
     flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .timetable__table-day-classes-list {
+    display: none;
+    margin-right: 0;
+  }
+
+  .timetable__table-day-classes-list--active {
+    display: block;
   }
 
   .timetable__table-day-classes-list li {
-    @include font(16px, 16px);
+    @include font(16px, 18px);
     max-width: none;
     width: calc(100% - 50px);
   }
@@ -184,8 +203,8 @@
     right: -52px;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 56px;
+    width: 52px;
+    height: 58px;
     border: 2px solid $color-blue-2;
     justify-content: center;
     align-items: center;
@@ -196,5 +215,22 @@
     max-width: none;
     width: 100%;
     padding: 35px 12px;
+  }
+
+  .timetable__table-time-overley {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $color-white;
+    opacity: 0.8;
+  }
+
+  .timetable__table-time-overley--active {
+    display: block;
+  }
+
+  .timetable__table-day--active-list ~ li {
+    display: none;
   }
 }
