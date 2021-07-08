@@ -7,7 +7,7 @@
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x",
+    "eslint-config-htmlacademy": "4.0.2",
     "gulp": "4.0.x",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
@@ -49,9 +49,6 @@
     "source/img/**/*.svg",
     "source/sass/**/*.{sass,scss}"
   ],
-  "engines": {
-    "node": "8.15"
-  },
   "dependencies": {
     "del": "^4.1.1"
   }

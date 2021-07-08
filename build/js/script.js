@@ -2,7 +2,7 @@
 
 //swiper slider initialslide
 
-var swiper = new Swiper('.mySwiper', {
+const swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
   spaceBetween: 30,
   slidesPerGroup: 1,
@@ -28,7 +28,7 @@ var swiper = new Swiper('.mySwiper', {
 });
 
 
-var swiper2 = new Swiper('.mySwiper2', {
+const swiper2 = new Swiper('.mySwiper2', {
   spaceBetween: 30,
   loop: true,
   // loopFillGroupWithBlank: true,
@@ -44,32 +44,36 @@ $('#telephone').mask('+7 (999) 999-99-99');
 
 //timetable
 
-var activeRowClassName = 'timetable__table-active';
-var activeDayClassName = 'timetable__table-day--active';
-var activeTimeClassName = 'timetable__table-time--active';
+let currentActive = null
 
-var table = document.querySelector('.timetable__table');
-var timesList = document.querySelector('.timetable__table-time-list');
+const activeRowClassName = 'timetable__table-active';
+const activeDayClassName = 'timetable__table-day--active';
+const activeTimeClassName = 'timetable__table-time--active';
 
-var removeActiveClasses = (arrayOfClassNames) => {
-  arrayOfClassNames.forEach(classname => {
+const table = document.querySelector('.timetable__table');
+const timesList = document.querySelector('.timetable__table-time-list');
+
+const removeActiveClasses = (arrayOfClassNames) => {
+  Array.from(arrayOfClassNames).forEach(classname => {
     document.querySelectorAll('.' + classname).forEach(el => el.classList.remove(classname))
   })
 };
 
-var handleTableClick = (evt) => {
-  var target = evt.target
-  var parent = target.parentNode
-  var currentIdx = [...parent.children].findIndex(el => el === target)
+const handleTableClick = (evt) => {
+  const target = evt.target
+  const parent = target.parentNode
+  const currentIdx = [...parent.children].findIndex(el => el === target)
 
   if (!currentIdx || target.nodeName !== 'LI' || target.closest('.timetable__table-time-list')) return
 
   removeActiveClasses([activeDayClassName, activeRowClassName, activeTimeClassName])
 
+  currentActive = target
+
   target.classList.add(activeRowClassName)
   parent.querySelector('li').classList.add(activeDayClassName)
 
-  var currentTime = timesList.children[currentIdx]
+  const currentTime = timesList.children[currentIdx]
   currentTime.classList.add(activeTimeClassName)
 };
 
@@ -77,8 +81,71 @@ table.addEventListener('click', handleTableClick);
 
 //timetable mobile
 
-var activeOverlayClassName = 'timetable__table-time-overley--active';
-var activeClassesListClassName = 'timetable__table-day-classes-list--active';
-var activeDayListClassName = 'timetable__table-day--active-list';
 
-console.log(table);
+const activeOverlayClassName = 'timetable__table-time-overley--active';
+const activeClassesListClassName = 'timetable__table-day-classes-list--active';
+const activeDayListClassName = 'timetable__table-day--active-list';
+
+const days = document.querySelectorAll('.timetable__table-day')
+const colomns = document.querySelectorAll('.timetable__table-day-classes-list')
+const overley = document.querySelector('.timetable__table-time-overley')
+
+function addActiveClass(el, cls) {
+  el.classList.add(cls)
+}
+
+function removeActiveClass(el, cls) {
+  el.classList.remove(cls)
+}
+
+let isSelectShown = false
+
+const handleTableClick2 = (evt) => {
+  if (isSelectShown) return
+
+  const target = evt.target
+
+  currentActive = target
+
+  if (target.hasAttribute('data-day')) {
+    days.forEach(el => {
+      addActiveClass(el, activeDayListClassName)
+    })
+
+    colomns.forEach(el => {
+      addActiveClass(el, activeClassesListClassName)
+    })
+
+    addActiveClass(overley, activeOverlayClassName)
+
+    isSelectShown = true
+  }
+}
+
+table.addEventListener('click', handleTableClick2);
+
+overley.addEventListener('click', ev => {
+  removeActiveClass(overley, activeOverlayClassName)
+
+  Array.from(days).forEach(el => {
+    removeActiveClass(el, activeDayListClassName)
+  })
+
+  Array.from(colomns).filter(c => c !== currentActive.parentNode).forEach( el => {
+    removeActiveClass(el, activeClassesListClassName)
+  })
+})
+
+days.forEach(day => {
+  day.addEventListener('click', evt => {
+    removeActiveClass(overley, activeOverlayClassName)
+
+    Array.from(days).forEach(el => {
+      removeActiveClass(el, activeDayListClassName)
+    })
+
+    Array.from(colomns).filter(c => c !== evt.target.parentNode).forEach( el => {
+      removeActiveClass(el, activeClassesListClassName)
+    })
+  })
+})
