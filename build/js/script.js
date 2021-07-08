@@ -81,4 +81,31 @@ var activeOverlayClassName = 'timetable__table-time-overley--active';
 var activeClassesListClassName = 'timetable__table-day-classes-list--active';
 var activeDayListClassName = 'timetable__table-day--active-list';
 
-console.log(table);
+var days = document.querySelectorAll('.timetable__table-day')
+var colomns = document.querySelectorAll('.timetable__table-day-classes-list')
+var overley = document.querySelector('.timetable__table-time-overley')
+console.log(days);
+
+var handleTableClick2 = (evt) => {
+  var target = evt.target
+  var parent = target.parentNode
+
+  function addActiveClasses(el, cls) {
+    el.classList.add(cls)
+  }
+
+
+  if (target.hasAttribute('data-day')) {
+    days.forEach( el => {
+      addActiveClasses(el, activeDayListClassName)
+    })
+    colomns.forEach( el => {
+      addActiveClasses(el, activeClassesListClassName)
+    })
+    addActiveClasses(overley, activeOverlayClassName)
+    console.log('sdd');
+  }
+}
+
+table.addEventListener('click', handleTableClick2);
+
