@@ -85,6 +85,8 @@ table.addEventListener('click', handleTableClick);
 const activeOverlayClassName = 'timetable__table-time-overley--active';
 const activeClassesListClassName = 'timetable__table-day-classes-list--active';
 const activeDayListClassName = 'timetable__table-day--active-list';
+const activeArrowClassName = 'timetable__table-day-arrow--active';
+
 
 const days = document.querySelectorAll('.timetable__table-day')
 const colomns = document.querySelectorAll('.timetable__table-day-classes-list')

@@ -196,7 +196,7 @@
     position: relative;
   }
 
-  .timetable__table-day-classes-list--active:first-child .timetable__table-day::after {
+  .timetable__table-day-classes-list--active .timetable__table-day::after {
     display: flex;
     position: absolute;
     content: url("../img/arrow-down.svg");
