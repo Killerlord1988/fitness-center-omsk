@@ -40,7 +40,32 @@ const swiper2 = new Swiper('.mySwiper2', {
 
 //masked input
 
-$('#telephone').mask('+7 (999) 999-99-99');
+const form = document.querySelector('.free-lesson__form')
+const submitForm = form.querySelector('.free-lesson__form button');
+// console.log(submitForm);
+
+form.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+})
+
+submitForm.addEventListener('click', checkValidate)
+
+$(document).ready(function() {
+  $('#telephone').inputmask('+7 (999) 999-99-99');
+});
+
+function checkValidate() {
+  let bCheck = 'validate = ok';
+  $('#telephone').each(function() {
+    if (!$(this).inputmask('isComplete')) {
+      bCheck = 'validate = no';
+      $('#telephone').get(0).setCustomValidity('Введите телефон в правильном формате');
+    } else {
+      $('.free-lesson__form').submit();
+    }
+  });
+  console.log(bCheck);
+}
 
 //timetable
 

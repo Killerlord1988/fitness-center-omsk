@@ -35,7 +35,7 @@ gulp.task("css", function () {
 gulp.task("vendor-script", function() {
   return gulp.src([
     "source/js/lib/jquery-1.8.3.js",
-    "source/js/lib/jquery.maskedinput.js",
+    "source/js/lib/jquery.inputmask.min.js",
     "source/js/lib/swiper-bundle.min.js",
 ])
 .pipe(sourcemap.init())

@@ -40,7 +40,23 @@ const swiper2 = new Swiper('.mySwiper2', {
 
 //masked input
 
-$('#telephone').mask('+7 (999) 999-99-99');
+// const submitForm = document.querySelector('.free-lesson__form button');
+// console.log(submitForm);
+
+$(document).ready(function() {
+  $("#telephone").inputmask('+7 (999) 999-99-99');
+});
+
+// function checkValidate() {
+//   let bCheck = "validate = ok";
+//   $("#telephone").each(function(i) {
+//     if (!$(this).inputmask("isComplete")) {
+//       bCheck = "validate = no";
+//     }
+//   });
+//   console.log(bCheck);
+// }
+
 
 //timetable
 
