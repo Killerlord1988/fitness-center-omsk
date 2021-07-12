@@ -40,23 +40,28 @@ const swiper2 = new Swiper('.mySwiper2', {
 
 //masked input
 
-// const submitForm = document.querySelector('.free-lesson__form button');
+// const form = document.querySelector('.free-lesson__form')
+// const submitForm = form.querySelector('.free-lesson__form button');
 // console.log(submitForm);
 
+$('.free-lesson__form button').bind('click', checkValidate)
+
 $(document).ready(function() {
-  $("#telephone").inputmask('+7 (999) 999-99-99');
+  $('#telephone').inputmask('+7 (999) 999-99-99');
 });
 
-// function checkValidate() {
-//   let bCheck = "validate = ok";
-//   $("#telephone").each(function(i) {
-//     if (!$(this).inputmask("isComplete")) {
-//       bCheck = "validate = no";
-//     }
-//   });
-//   console.log(bCheck);
-// }
-
+function checkValidate() {
+  let bCheck = 'validate = ok';
+  $('#telephone').each(function() {
+    if (!$(this).inputmask('isComplete')) {
+      bCheck = 'validate = no';
+      $('#telephone').get(0).setCustomValidity('Введите телефон в правильном формате');
+    } else {
+      $('.free-lesson__form').submit();
+    }
+  });
+  console.log(bCheck);
+}
 
 //timetable
 
