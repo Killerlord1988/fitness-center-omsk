@@ -40,15 +40,11 @@ const swiper2 = new Swiper('.mySwiper2', {
 
 //masked input
 
-const form = document.querySelector('.free-lesson__form')
-const submitForm = form.querySelector('.free-lesson__form button');
+// const form = document.querySelector('.free-lesson__form')
+// const submitForm = form.querySelector('.free-lesson__form button');
 // console.log(submitForm);
 
-form.addEventListener('submit', function(evt) {
-  evt.preventDefault();
-})
-
-submitForm.addEventListener('click', checkValidate)
+$('.free-lesson__form button').bind('click', checkValidate)
 
 $(document).ready(function() {
   $('#telephone').inputmask('+7 (999) 999-99-99');
