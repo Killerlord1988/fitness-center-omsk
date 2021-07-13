@@ -37,6 +37,10 @@
   padding-bottom: 20px;
 }
 
+.subscriptions__mounth input:focus + label {
+  outline: 1px solid #000000;
+}
+
 .subscriptions__mounth input[type="radio"] {
   position: absolute;
   opacity: 0;
