@@ -20,11 +20,13 @@
 
 .footer__nav {
   display: flex;
+  flex-wrap: wrap
 }
 
 .footer__nav-list {
   @include clear-list;
   display: flex;
+  flex-wrap: wrap;
   margin-right: 40px;
 }
 

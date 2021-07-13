@@ -23,6 +23,7 @@
 }
 
 .hero__about-img {
+  margin-right: 20px;
   display: flex;
 }
 
@@ -56,6 +57,7 @@
   @include font(14px, 150%);
   text-align: right;
   color: $color-white;
+  max-width: 113px;
 }
 
 .hero a {
@@ -114,6 +116,7 @@
   .hero__about-img {
     justify-content: space-between;
     width: 100%;
+    margin-right: 0;
   }
 
   .hero__about > p {

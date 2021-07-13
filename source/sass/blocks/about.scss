@@ -59,7 +59,7 @@
   left: 0;
   bottom: 0;
   overflow: hidden;
-  width: 364px;
+  max-width: 364px;
   height: auto;
   line-height: 0;
 }
@@ -173,7 +173,7 @@
   }
 
   .about__video {
-    width: 266px;
+    max-width: 266px;
   }
 
   .about__video-btn-border {
@@ -230,6 +230,7 @@
   }
 
   .about__video {
+    max-width: none;
     width: 100%;
     height: auto;
     margin-top: 40px;

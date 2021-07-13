@@ -85,11 +85,13 @@
   width: 48%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .promotions__item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 211px;
   padding: 35px;
   border: 7px solid transparent;
@@ -100,7 +102,7 @@
 }
 
 .promotions__item:last-child {
-  margin-top: auto;
+  margin-top: 15px;
 }
 
 .promotions__item-top p:first-child {
@@ -117,7 +119,7 @@
 
 .promotions__item a {
   width: fit-content;
-  margin-top: auto;
+  margin-top: 20px;
   @include font(12px, 12px);
   font-weight: bold;
   letter-spacing: 0.05em;
