@@ -5,13 +5,6 @@
 const mounthsTabs = document.querySelector('.subscriptions__mounth');
 const months = document.getElementsByName('mount');
 const subscriptionsList = document.querySelectorAll('.subscriptions__list')
-console.log(months);
-
-// const removeSubscriptionsListActive = (arrayOfClassNames) => {
-//   Array.from(arrayOfClassNames).forEach(classname => {
-//     document.querySelectorAll('.' + classname).forEach(el => el.classList.remove(classname))
-//   })
-// };
 
 function removeSubscriptionsListActive(arr, cls) {
     arr.forEach(el => {
@@ -28,7 +21,8 @@ const handleMounthsTabsClick = (evt) => {
   }
 }
 
-mounthsTabs.addEventListener('click', handleMounthsTabsClick);
+$('.subscriptions__mounth').bind('click', handleMounthsTabsClick)
+
 
 //swiper slider initialslide
 
@@ -69,10 +63,6 @@ const swiper2 = new Swiper('.mySwiper2', {
 });
 
 //masked input
-
-// const form = document.querySelector('.free-lesson__form')
-// const submitForm = form.querySelector('.free-lesson__form button');
-// console.log(submitForm);
 
 $('.free-lesson__form button').bind('click', checkValidate)
 
