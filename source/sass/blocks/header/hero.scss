@@ -26,7 +26,7 @@
   display: flex;
 }
 
-.hero__about-city {
+.hero__about > p {
   @include clear-content (0);
   font-family: $second-font;
   @include font(49px, 49px);
@@ -34,7 +34,11 @@
   color: $color-white;
 }
 
-.hero__about-title {
+.hero__about-bottom {
+  position: relative;
+}
+
+.hero__about-bottom p:first-child {
   @include clear-content (25px);
   font-family: $second-font;
   font-weight: bold;
@@ -44,11 +48,7 @@
   color: $color-white;
 }
 
-.hero__about-bottom {
-  position: relative;
-}
-
-.hero__about-description {
+.hero__about-bottom p:last-child {
   @include clear-content (0);
   left: -80px;
   top: 150px;
@@ -116,15 +116,15 @@
     width: 100%;
   }
 
-  .hero__about-city {
+  .hero__about > p {
     @include font(34px, 34px);
   }
 
-  .hero__about-title {
+  .hero__about-bottom p:first-child {
     @include font(86px, 86px);
   }
 
-  .hero__about-description {
+  .hero__about-bottom p:last-child {
     @include font(14px, 150%);
     top: 115px;
   }
@@ -160,15 +160,15 @@
     margin-left: auto;
   }
 
-  .hero__about-city {
+  .hero__about > p {
     @include font(28px, 28px);
   }
 
-  .hero__about-title {
+  .hero__about-bottom p:first-child {
     @include font(78px, 78px);
   }
 
-  .hero__about-description {
+  .hero__about-bottom p:last-child {
     @include font(14px, 21px);
     top: 105px;
     left: -75px;
