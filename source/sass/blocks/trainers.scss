@@ -23,7 +23,7 @@
   line-height: 0;
 }
 
-.trainers__slider-slide-name {
+.trainers__slider-slide > p {
   text-align: center;
   width: 100%;
   position: absolute;
@@ -52,7 +52,7 @@
   opacity: 1;
 }
 
-.trainers__slider-slide:hover .trainers__slider-slide-name {
+.trainers__slider-slide:hover > p {
   opacity: 0;
 }
 

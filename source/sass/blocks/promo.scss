@@ -32,7 +32,7 @@
   flex-direction: column
 }
 
-.promo__data-name {
+.promo__data > p {
   @include clear-content (0);
   @include font(18px, 150%);
   font-weight: normal;
@@ -56,7 +56,7 @@
   top: 4px;
 }
 
-.promo__day-number {
+.promo__day > p {
   @include clear-content (0);
   @include font(40px, 150%);
   font-weight: bold;
@@ -101,7 +101,7 @@
   top: 4px;
 }
 
-.promo__description {
+.promo__about > p {
   @include clear-content (15px);
   @include font(18px, 150%);
   font-weight: normal;
@@ -155,11 +155,11 @@
     margin-right: 29px;
   }
 
-  .promo__data-name {
+  .promo__data > p {
     @include font(12px, 150%);
   }
 
-  .promo__day-number {
+  .promo__day > p {
     @include font(24px, 36px);
     margin-right: 3px;
   }
@@ -188,7 +188,7 @@
     top: 2px;
   }
 
-  .promo__description {
+  .promo__about > p {
     @include font(12px, 18px);
   }
 
