@@ -1,5 +1,35 @@
 'use strict';
 
+//tabs radio
+
+const mounthsTabs = document.querySelector('.subscriptions__mounth');
+const months = document.getElementsByName('mount');
+const subscriptionsList = document.querySelectorAll('.subscriptions__list')
+console.log(months);
+
+// const removeSubscriptionsListActive = (arrayOfClassNames) => {
+//   Array.from(arrayOfClassNames).forEach(classname => {
+//     document.querySelectorAll('.' + classname).forEach(el => el.classList.remove(classname))
+//   })
+// };
+
+function removeSubscriptionsListActive(arr, cls) {
+    arr.forEach(el => {
+    el.classList.remove(cls)
+  });
+};
+
+const handleMounthsTabsClick = (evt) => {
+  removeSubscriptionsListActive(subscriptionsList, 'subscriptions__list--active')
+  for (var i = 0; i < months.length; i++) {
+    if (months[i].type == "radio" && months[i].checked) {
+      subscriptionsList[i].classList.add('subscriptions__list--active')
+    }
+  }
+}
+
+mounthsTabs.addEventListener('click', handleMounthsTabsClick);
+
 //swiper slider initialslide
 
 const swiper = new Swiper('.mySwiper', {
@@ -46,13 +76,13 @@ const swiper2 = new Swiper('.mySwiper2', {
 
 $('.free-lesson__form button').bind('click', checkValidate)
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('#telephone').inputmask('+7 (999) 999-99-99');
 });
 
 function checkValidate() {
   let bCheck = 'validate = ok';
-  $('#telephone').each(function() {
+  $('#telephone').each(function () {
     if (!$(this).inputmask('isComplete')) {
       bCheck = 'validate = no';
       $('#telephone').get(0).setCustomValidity('Введите телефон в правильном формате');
