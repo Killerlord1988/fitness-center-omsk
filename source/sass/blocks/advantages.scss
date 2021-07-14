@@ -191,6 +191,38 @@
   .advantages__wrapper h2 {
     @include font(42px, 42px);
   }
+
+  .advantages__about {
+    margin-top: 42px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .advantages__item-count>p:last-child {
+    @include clear-content (0);
+  }
+
+  .advantages__item-content p:last-child {
+    @include clear-content (12px);
+  }
+
+  .advantages__about-promo {
+    margin-top: 45px;
+    padding: 32px 34px;
+    padding-bottom: 45px;
+  }
+
+  .advantages__about-promo-top p:last-child  {
+    margin-top: 5px;
+  }
+
+  .advantages__about-promo>p {
+    margin-top: 26px;
+  }
+
+  .advantages__about-bottom {
+    margin-top: 45px;
+  }
 }
 
 @media (max-width: $mobile-width) {

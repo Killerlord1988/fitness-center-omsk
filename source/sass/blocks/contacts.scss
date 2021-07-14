@@ -65,8 +65,12 @@
     padding-right: 179px;
   }
 
+  .contacts__wrapper h2 {
+    @include font(42px, 42px);
+  }
+
   .contacts__content {
-    margin-top: 37px;
+    margin-top: 30px;
     display: flex;
     justify-content: flex-start;
   }

@@ -203,7 +203,7 @@
   }
 
   .subscriptions__mounth {
-    margin-top: 45px;
+    margin-top: 30px;
   }
 
   .subscriptions__mounth label {
@@ -218,8 +218,8 @@
   }
 
   .subscriptions__list li {
-    margin-top: 40px;
-    padding: 58px 118px;
+    margin-top: 50px;
+    padding: 59px 118px;
     max-width: 442px;
   }
 
@@ -229,6 +229,10 @@
 
   .subscriptions__list li:first-child {
     margin-top: 0;
+  }
+
+  .subscriptions__item-title p {
+    @include clear-content (14px);
   }
 }
 

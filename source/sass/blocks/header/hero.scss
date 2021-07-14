@@ -98,12 +98,12 @@
 @media (max-width: $tablet-width) {
   .hero {
     padding-left: 89px;
-    padding-top: 25px;
-    padding-bottom: 82px;
+    padding-top: 18px;
+    padding-bottom: 102px;
   }
 
   .hero__wrapper {
-    padding-right: 18px;
+    padding-right: 43px;
     padding-left: 45px;
   }
 
@@ -124,15 +124,18 @@
 
   .hero__about-bottom p:first-child {
     @include font(86px, 86px);
+    margin-top: 4px;
   }
 
   .hero__about-bottom p:last-child {
     @include font(14px, 150%);
-    top: 115px;
+    top: 96px;
+    left: -87px;
   }
 
   .hero a {
-    margin-top: 60px;
+    margin-top: 40px;
+    padding: 19px 30px;
   }
 
   .hero__social {

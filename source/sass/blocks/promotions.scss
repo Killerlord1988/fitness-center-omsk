@@ -138,7 +138,7 @@
   }
 
   .promotions__content {
-    margin-top: 50px;
+    margin-top: 33px;
     flex-direction: column;
   }
 
@@ -159,6 +159,10 @@
 
   .promotions__item {
     width: 48%;
+  }
+
+  .promotions__item:last-child {
+    margin-top: 0;
   }
 }
 

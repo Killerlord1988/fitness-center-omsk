@@ -190,6 +190,7 @@
 
   .promo__about > p {
     @include font(12px, 18px);
+    margin-top: 0;
   }
 
   .promo__about a {
@@ -198,7 +199,7 @@
     border: 2px solid $color-white;
     padding-top: 12px;
     padding-bottom: 12px;
-    margin-top: 36px;
+    margin-top: 27px;
   }
 
   .promo__img {

@@ -83,9 +83,6 @@
   right: -60px;
 }
 
-
-
-
 @media (max-width: $tablet-width) {
   .reviews {
     padding-top: 100px;
@@ -98,6 +95,11 @@
 
   .reviews__container {
     max-width: 566px;
+    margin-top: 40px;
+  }
+
+  .reviews__slider-slide {
+    padding-bottom: 35px;
   }
 }
 
