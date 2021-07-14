@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   background-color: $color-red;
-  padding: 87px 78px;
+  padding: 83px 78px;
 }
 
 .promo__about-top {
@@ -74,7 +74,7 @@
 }
 
 .promo__time {
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .promo__time p:first-child {
@@ -102,7 +102,7 @@
 }
 
 .promo__about > p {
-  @include clear-content (15px);
+  @include clear-content (8px);
   @include font(18px, 150%);
   font-weight: normal;
   color: $color-white;
@@ -118,7 +118,7 @@
   text-align: center;
   padding-top: 23px;
   padding-bottom: 23px;
-  margin-top: 55px;
+  margin-top: 52px;
 }
 
 .promo__img {

@@ -4,7 +4,7 @@
 
 .advantages__wrapper {
   max-width: 1406px;
-  padding-right: 103px;
+  padding-right: 86px;
   padding-left: 103px;
   margin-right: auto;
   margin-left: auto;
@@ -23,8 +23,8 @@
 
 .advantages__about {
   position: relative;
-  margin-top: 80px;
-  padding-left: 61px;
+  margin-top: 60px;
+  padding-left: 88px;
   padding-right: 61px;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .advantages__about-bottom {
-  margin-top: 115px;
+  margin-top: 150px;
 }
 
 .advantages__item {
@@ -59,7 +59,7 @@
 }
 
 .advantages__item-count>p:last-child {
-  @include clear-content (12px);
+  @include clear-content (0);
   @include font(14px, 14px);
   font-weight: normal;
   color: $color-text-advantages;
@@ -72,7 +72,7 @@
 }
 
 .advantages__item-content p:last-child {
-  @include clear-content (20px);
+  @include clear-content (7px);
   @include font(16px, 140%);
 }
 
@@ -82,7 +82,7 @@
   transform: translateX(-50%);
   position: absolute;
   max-width: 240px;
-  padding: 50px 34px;
+  padding: 59px 34px;
   background-color: $color-blue-2;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .advantages__about-promo-top p:last-child {
-  @include clear-content (25px);
+  @include clear-content (15px);
   @include font(26px, 26px);
   font-weight: bold;
   color: $color-white;

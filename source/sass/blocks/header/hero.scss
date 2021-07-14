@@ -1,14 +1,13 @@
 .hero {
-
   padding-left: 98px;
-  padding-bottom: 51px;
+  padding-bottom: 40px;
 }
 
 .hero__wrapper {
   display: flex;
   justify-content: space-between;
   max-width: 1406px;
-  padding-right: 103px;
+  padding-right: 86px;
   padding-left: 103px;
   margin-right: auto;
   margin-left: auto;
@@ -18,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 122px;
+  padding-top: 111px;
   margin-right: 65px;
 }
 
@@ -40,7 +39,7 @@
 }
 
 .hero__about-bottom p:first-child {
-  @include clear-content (25px);
+  @include clear-content (14px);
   font-family: $second-font;
   font-weight: bold;
   @include font(109px, 109px);
@@ -51,8 +50,8 @@
 
 .hero__about-bottom p:last-child {
   @include clear-content (0);
-  left: -80px;
-  top: 150px;
+  left: -76px;
+  top: 140px;
   position: absolute;
   @include font(14px, 150%);
   text-align: right;
@@ -61,10 +60,10 @@
 }
 
 .hero a {
-  margin-top: 80px;
+  margin-top: 56px;
   font-weight: bold;
   @include font(12px, 14px);
-  padding: 24px 57px;
+  padding: 19px 54px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,11 +84,11 @@
   align-items: center;
   text-align: right;
   text-transform: uppercase;
-  margin-bottom: 45px;
+  margin-bottom: 53px;
 }
 
 .hero__social a {
-  margin-top: 24px;
+  margin-top: 19px;
   border: none;
   padding: 0;
   font-weight: regular;

@@ -13,7 +13,7 @@
 
 .trainers__slider {
   position: relative;
-  margin-top: 62px;
+  margin-top: 50px;
 }
 
 .trainers__slider-slide {
@@ -31,7 +31,7 @@
   @include font(18px, 150%);
   font-weight: bold;
   color: $color-white;
-  bottom: 20px;
+  bottom: 22px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -57,7 +57,7 @@
 }
 
 .trainers__slider-dark-name p:first-child {
-  @include clear-content (0);
+  @include clear-content (25px);
   @include font(18px, 150%);
   font-weight: bold;
   text-align: center;
@@ -74,12 +74,13 @@
 
 .trainers__slider-dark-list {
   @include clear-list;
-  margin-top: 20px;
+  margin-top: 30px;
+  padding-left: 20px;
 }
 
 .trainers__slider-dark-list li {
   position: relative;
-  margin-top: 15px;
+  margin-top: 13px;
   padding-left: 16px;
 }
 
@@ -90,8 +91,8 @@
   height: 6px;
 
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 6px;
+  // transform: translateY(-50%);
 
   background-color: $color-white;
   border-radius: 50%;

@@ -1,6 +1,6 @@
 .about {
   max-width: 1406px;
-  padding-right: 103px;
+  padding-right: 86px;
   padding-left: 103px;
   margin-right: auto;
   margin-left: auto;
@@ -21,7 +21,7 @@
 }
 
 .about__text-title h2 {
-  @include clear-content (49px);
+  @include clear-content (48px);
   font-family: $second-font;
   @include font(49px, 49px);
   font-weight: bold;
@@ -30,16 +30,16 @@
 
 .about__text-title p {
   font-weight: normal;
-  @include clear-content (25px);
+  @include clear-content (5px);
   @include font(18px, 150%);
 }
 
 .about__text-content {
-  margin-top: 55px;
+  margin-top: 40px;
 }
 
 .about__text-content p {
-  @include clear-content (20px);
+  @include clear-content (8px);
   font-weight: 300;
   @include font(16px, 150%);
 }

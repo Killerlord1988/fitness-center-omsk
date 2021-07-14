@@ -18,7 +18,7 @@
   margin-right: auto;
   max-width: 560px;
   position: relative;
-  margin-top: 62px;
+  margin-top: 48px;
 }
 
 .reviews__slider-slide {
@@ -54,7 +54,7 @@
 }
 
 .reviews__slider-content-name > p {
-  @include clear-content(25px);
+  @include clear-content(15px);
   @include font(16px, 140%);
   font-weight: normal;
   color: $color-white;

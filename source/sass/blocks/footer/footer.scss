@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 44px;
-  padding-bottom: 44px;
+  padding-top: 38px;
+  padding-bottom: 38px;
 }
 
 .footer__logo {
@@ -19,6 +19,7 @@
 }
 
 .footer__nav {
+  padding-left: 22px;
   display: flex;
   flex-wrap: wrap
 }

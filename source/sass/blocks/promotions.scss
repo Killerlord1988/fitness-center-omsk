@@ -14,7 +14,7 @@
 .promotions__content {
   display: flex;
   justify-content: space-between;
-  margin-top: 62px;
+  margin-top: 46px;
 }
 
 .promotions__poster {
@@ -26,9 +26,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 45px;
+  padding: 40px 45px;
   background-color: $color-red;
-  max-width: 280px;
+  min-width: 280px;
   min-height: 462px;
 }
 
@@ -40,14 +40,14 @@
 }
 
 .promotions__about-year p:last-child {
-  @include clear-content (10px);
+  @include clear-content (5px);
   @include font(70px, 70px);
   font-weight: bold;
   color: $color-white;
 }
 
 .promotions__about-top>p {
-  @include clear-content (35px);
+  @include clear-content (18px);
   @include font(18px, 140%);
   font-weight: normal;
   color: $color-white;
@@ -93,7 +93,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 211px;
-  padding: 35px;
+  padding: 25px;
   border: 7px solid transparent;
   border-image: linear-gradient(#d10a42, #00359f);
   -moz-border-image: -moz-linear-gradient(#d10a42, #00359f);
@@ -112,7 +112,7 @@
 }
 
 .promotions__item-top p:last-child {
-  @include clear-content(20px);
+  @include clear-content(11px);
   @include font(16px, 16px);
   font-weight: normal;
 }

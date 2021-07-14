@@ -32,9 +32,9 @@
 .subscriptions__mounth {
   position: relative;
   display: flex;
-  margin-top: 53px;
+  margin-top: 32px;
   border-bottom: 2px solid rgba($color: #787878, $alpha: 0.2);
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .subscriptions__mounth input:focus + label {
@@ -68,7 +68,7 @@
 .subscriptions__mounth input:checked+label::before {
   position: absolute;
   content: "";
-  bottom: -22px;
+  bottom: -12px;
   height: 2px;
   width: 100%;
   background-color: #d10a42;
@@ -104,7 +104,7 @@
 }
 
 .subscriptions__item-title p {
-  @include clear-content (22px);
+  @include clear-content (4px);
   @include font(16px, 150%);
   font-weight: normal;
   text-align: center;
@@ -117,7 +117,7 @@
 
 .subscriptions__item-price p {
   position: relative;
-  @include clear-content (96px);
+  @include clear-content (66px);
   @include font(60px, 150%);
   font-weight: bold;
   text-align: center;
@@ -158,7 +158,7 @@
   padding: 23px 43px;
   color: $color-text;
   border: 2px solid $color-text;
-  margin-top: 59px;
+  margin-top: 35px;
 }
 
 .subscriptions__list li:hover {
