@@ -99,7 +99,7 @@
   .hero {
     padding-left: 89px;
     padding-top: 18px;
-    padding-bottom: 102px;
+    padding-bottom: 75px;
   }
 
   .hero__wrapper {
@@ -136,6 +136,13 @@
   .hero a {
     margin-top: 40px;
     padding: 19px 30px;
+  }
+
+  .hero__img img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 351px;
+    height: 390px;
   }
 
   .hero__social {
