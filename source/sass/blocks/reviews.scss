@@ -130,11 +130,11 @@
   }
 
   .reviews__slider-control--prev {
-    left: -5px;
+    left: 0;
   }
 
   .reviews__slider-control--next {
-    right: -5px;
+    right: 0;
   }
 
   .reviews__slider-img {
@@ -146,7 +146,7 @@
   }
 
   .reviews__slider-content-name > p {
-    @include clear-content(20px);
+    @include clear-content(6px);
     text-align: center;
   }
 
@@ -157,10 +157,12 @@
   }
 
   .reviews__slider-img--mobile {
-    display: block;
+    display: flex;
+    align-items: center;
     margin-right: 15px;
-    width: 68px;
-    height: 68px;
+    margin-left: 15px;
+    min-width: 68px;
+    // height: 68px;
   }
 
   .reviews__slider-content-top p {

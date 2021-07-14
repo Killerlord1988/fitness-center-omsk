@@ -176,7 +176,7 @@
 @media (max-width: $mobile-width) {
   .trainers {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 84px;
   }
 
   .trainers__wrapper h2 {
@@ -186,6 +186,19 @@
   .trainers__container {
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  .trainers__slider-dark {
+    padding: 25px 30px;
+  }
+
+  .trainers__slider-dark-list {
+    padding-left: 0;
+    margin-top: 28px;
+  }
+
+  .trainers__slider-dark-name p:first-child {
+    margin-top: 15px;
   }
 
   .trainers__slider-control {

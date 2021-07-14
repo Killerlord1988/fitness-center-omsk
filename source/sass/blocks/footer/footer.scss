@@ -93,6 +93,8 @@
   .footer__wrapper {
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .footer__logo {
@@ -102,6 +104,11 @@
   .footer__logo--mobile {
     display: block;
     @include font(20px, 20px);
+    min-height: 24px;
+  }
+
+  .footer__nav {
+    padding-left: 0;
   }
 
   .footer__nav-list:first-child li:first-child {
@@ -109,20 +116,28 @@
   }
 
   .footer__nav-list {
-    margin-right: 71px;
+    margin-right: 76px;
   }
 
   .footer__nav-list li {
-    margin-top: 30px;
+    margin-top: 16px;
     margin-right: 0;
+  }
+
+  .footer__nav-list li:first-child {
+    margin-top: 0;
   }
 
   .footer__nav-list {
     flex-direction: column;
   }
 
+  .footer__nav-list a {
+    @include font(16px, 16px);
+  }
+
   .footer__social {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   .footer__social a {

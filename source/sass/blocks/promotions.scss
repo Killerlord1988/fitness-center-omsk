@@ -175,6 +175,10 @@
     @include font(32px, 32px);
   }
 
+  .promotions__content {
+    margin-top: 41px;
+  }
+
   .promotions__poster {
     flex-direction: column;
   }
@@ -193,7 +197,7 @@
   }
 
   .promotions__about-top > p {
-    @include clear-content (30px);
+    @include clear-content (13px);
     text-align: center;
   }
 
@@ -214,6 +218,7 @@
   .promotions__item {
     width: 100%;
     margin-top: 30px;
+    padding: 35px;
   }
 
   .promotions__item:last-child {
@@ -226,6 +231,7 @@
 
   .promotions__item-top p:last-child {
     text-align: center;
+    margin-top: 20px;
   }
 
   .promotions__item a {
