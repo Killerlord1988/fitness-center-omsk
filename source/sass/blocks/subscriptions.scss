@@ -101,6 +101,10 @@
   margin-right: 0;
 }
 
+.subscriptions__list li:nth-child(n+4) {
+  margin-top: 20px;
+}
+
 @media (max-width: 1310px) {
   .subscriptions__list {
     justify-content: space-around
@@ -108,6 +112,10 @@
 
   .subscriptions__list li {
     margin-top: 30px;
+  }
+
+  .subscriptions__list li:nth-child(3n) {
+    margin-right: 10px;
   }
 }
 
@@ -239,6 +247,14 @@
     margin-right: 0;
   }
 
+  .subscriptions__list li:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .subscriptions__list li:nth-child(n+4) {
+    margin-top: 50px;
+  }
+
   .subscriptions__list li:hover {
     padding: 52px 111px;
   }
@@ -283,6 +299,10 @@
     margin-top: 40px;
     padding: 52px 42px;
     max-width: none;
+  }
+
+  .subscriptions__list li:nth-child(n+4) {
+    margin-top: 40px;
   }
 
   .subscriptions__list li:hover {
