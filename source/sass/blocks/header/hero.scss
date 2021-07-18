@@ -49,14 +49,21 @@
 }
 
 .hero__about-bottom p:last-child {
+  display: flex;
+  flex-direction: column;
   @include clear-content (0);
   left: -76px;
   top: 140px;
   position: absolute;
+  max-width: 150px;
+  overflow: auto;
+  max-height: 100px;
+}
+
+.hero__about-bottom p:last-child span {
   @include font(14px, 150%);
   text-align: right;
   color: $color-white;
-  max-width: 113px;
 }
 
 .hero a {
