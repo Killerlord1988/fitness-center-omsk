@@ -16,10 +16,12 @@
   font-weight: bold;
   letter-spacing: 0.02em;
   color: $color-white;
+  padding-right: 22px;
 }
 
 .footer__nav {
   padding-left: 22px;
+  padding-right: 22px;
   display: flex;
   flex-wrap: wrap
 }
@@ -109,6 +111,7 @@
 
   .footer__nav {
     padding-left: 0;
+    padding-right: 0;
   }
 
   .footer__nav-list:first-child li:first-child {
@@ -116,7 +119,7 @@
   }
 
   .footer__nav-list {
-    margin-right: 76px;
+    margin-right: 71px;
   }
 
   .footer__nav-list li {
