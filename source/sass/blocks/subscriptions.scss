@@ -37,7 +37,7 @@
   padding-bottom: 10px;
 }
 
-.subscriptions__mounth input:focus + label {
+.subscriptions__mounth input:focus+label {
   outline: 1px solid #000000;
 }
 
@@ -94,6 +94,21 @@
   flex-direction: column;
   align-items: center;
   z-index: 10;
+  margin-right: 10px;
+}
+
+.subscriptions__list li:nth-child(3n) {
+  margin-right: 0;
+}
+
+@media (max-width: 1310px) {
+  .subscriptions__list {
+    justify-content: space-around
+  }
+
+  .subscriptions__list li {
+    margin-top: 30px;
+  }
 }
 
 .subscriptions__item-title h3 {
@@ -221,10 +236,11 @@
     margin-top: 50px;
     padding: 59px 118px;
     max-width: 442px;
+    margin-right: 0;
   }
 
   .subscriptions__list li:hover {
-    padding: 51px 111px;
+    padding: 52px 111px;
   }
 
   .subscriptions__list li:first-child {
